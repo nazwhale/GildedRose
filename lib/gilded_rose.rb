@@ -28,7 +28,7 @@ class GildedRose
         end
       end
 
-      #Sulfuras
+      #Sell in values without Sulfuras
       if item.name != "Sulfuras, Hand of Ragnaros"
         item.sell_in -= 1
       end
