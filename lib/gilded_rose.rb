@@ -8,7 +8,7 @@ class GildedRose
     @items.each do |item|
 
       #normal items
-      if item.name != "Aged Brie" and item.name != "Backstage passes to a TAFKAL80ETC concert"
+      unless item.name == "Aged Brie" || item.name == "Backstage passes to a TAFKAL80ETC concert"
         if item.quality > 0
           item.quality -= 1 unless item.name == "Sulfuras, Hand of Ragnaros"
         end
@@ -29,16 +29,14 @@ class GildedRose
       end
 
       #Sell in values without Sulfuras
-      if item.name != "Sulfuras, Hand of Ragnaros"
-        item.sell_in -= 1
-      end
+      item.sell_in -= 1 unless item.name == "Sulfuras, Hand of Ragnaros"
 
       #normal items
       if item.sell_in < 0
         if item.name != "Aged Brie"
           if item.name != "Backstage passes to a TAFKAL80ETC concert"
             if item.quality > 0
-              item.quality -= 1 if item.name != "Sulfuras, Hand of Ragnaros"
+              item.quality -= 1 unless item.name == "Sulfuras, Hand of Ragnaros"
             end
           else
             item.quality = item.quality - item.quality
