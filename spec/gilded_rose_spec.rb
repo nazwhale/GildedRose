@@ -4,9 +4,9 @@ describe GildedRose do
 
   let(:vest) { Item.new(name="+5 Dexterity Vest", sell_in=10, quality=20)}
   let(:brie) { Item.new(name="Aged Brie", sell_in=2, quality=0)}
-  let(:sulfuras) { Item.new(name="Sulfuras, Hand of Ragnaros", sell_in=0, quality=80) }
+  # let(:sulfuras) { Item.new(name="Sulfuras, Hand of Ragnaros", sell_in=0, quality=80) }
   let(:passes) { Item.new(name="Backstage passes to a TAFKAL80ETC concert", sell_in=15, quality=20) }
-  let(:items) {[vest, brie, sulfuras, passes]}
+  let(:items) {[vest, brie, passes]}
 
   subject(:gildedrose) { described_class.new(items)}
 
@@ -34,16 +34,6 @@ describe GildedRose do
     it "Quality of an item is never more than 50" do
       100.times{ gildedrose.update_quality }
       expect(brie.quality).to eq 50
-    end
-
-    it "Sulfuras never decreases in quality" do
-      100.times{ gildedrose.update_quality }
-      expect(sulfuras.quality).to eq 80
-    end
-
-    it "Sulfuras never has to be sold" do
-      100.times{ gildedrose.update_quality }
-      expect(sulfuras.sell_in).to eq 0
     end
 
     it "Backstage passes increase in quality as sell_in approaches 0" do
