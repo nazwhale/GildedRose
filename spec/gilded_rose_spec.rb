@@ -27,15 +27,6 @@ describe GildedRose do
       expect(vest.quality).not_to be_negative
     end
 
-    it "Aged Brie increases in Quality the older it gets" do
-      expect(brie.quality).to eq 1
-    end
-
-    it "Quality of an item is never more than 50" do
-      100.times{ gildedrose.update_quality }
-      expect(brie.quality).to eq 50
-    end
-
     it "Backstage passes increase in quality as sell_in approaches 0" do
       expect(passes.quality).to eq 21
     end

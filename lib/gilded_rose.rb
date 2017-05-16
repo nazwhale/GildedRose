@@ -1,4 +1,5 @@
 require_relative 'sulfuras'
+require_relative 'updates'
 
 class GildedRose
 
@@ -11,6 +12,8 @@ class GildedRose
 
       if item.name == "Sulfuras, Hand of Ragnaros"
         Sulfuras.new(item.sell_in, item.quality)
+      elsif item.name == "Aged Brie"
+        Brie.new(item.sell_in, item.quality)
       else
 
 
