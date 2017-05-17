@@ -16,16 +16,6 @@ describe GildedRose do
       gildedrose.update_quality
     end
 
-    it "Once the sell by date has passed, Quality degrades twice as fast" do
-      10.times{ gildedrose.update_quality }
-      expect(vest.sell_in).to eq -1
-      expect(vest.quality).to eq 8
-    end
-
-    it "The Quality of an item is never negative" do
-      100.times{ gildedrose.update_quality }
-      expect(vest.quality).not_to be_negative
-    end
 
     it "Backstage passes increase in quality as sell_in approaches 0" do
       expect(passes.quality).to eq 21

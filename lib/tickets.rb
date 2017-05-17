@@ -1,6 +1,4 @@
-require_relative 'updates'
-
-class Brie
+class Tickets
 
   attr_reader :sell_in, :quality
   include Updates
@@ -12,7 +10,7 @@ class Brie
 
   def update
     self.passage_of_time
-    self.mature if quality < 50
+    self.passage_of_time if sell_in <= 0
   end
 
 end
