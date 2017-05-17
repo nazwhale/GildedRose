@@ -2,7 +2,11 @@ require 'brie'
 
 describe Brie do
 
-  let(:brie) { Brie.new(sell_in=10, quality=20)}
+  let(:brie) { Brie.new(name="somerset brie", sell_in=10, quality=20)}
+
+  before do
+    brie.update
+  end
 
   it 'Sell in decreases by 1' do
     expect(brie.sell_in).to eq 9

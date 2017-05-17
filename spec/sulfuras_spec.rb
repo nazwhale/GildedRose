@@ -2,7 +2,7 @@ require 'sulfuras'
 
 describe Sulfuras do
 
-  subject(:sulfuras) { described_class.new(0, 80)}
+  subject(:sulfuras) { described_class.new("sulfuras", 0, 80)}
 
   it "The Quality of an item is never negative" do
     100.times{ sulfuras.update }

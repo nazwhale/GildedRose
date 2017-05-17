@@ -2,7 +2,11 @@ require 'normal'
 
 describe Normal do
 
-  let(:normal) { described_class.new(sell_in=10, quality=20)}
+  let(:normal) { described_class.new(name="normal", sell_in=10, quality=20)}
+
+  before do
+    normal.update
+  end
 
   it 'Sell in decreases by 1' do
     expect(normal.sell_in).to eq 9
@@ -22,7 +26,5 @@ describe Normal do
     expect(normal.sell_in).to eq -1
     expect(normal.quality).to eq 8
   end
-
-
 
 end

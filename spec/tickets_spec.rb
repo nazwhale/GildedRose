@@ -2,7 +2,11 @@ require 'tickets'
 
 describe Tickets do
 
-  let(:tickets) { described_class.new(sell_in=15, quality=20)}
+  let(:tickets) { described_class.new(name="tickets", sell_in=15, quality=20)}
+
+  before do
+    tickets.update
+  end
 
   it 'Sell in decreases by 1' do
     expect(tickets.sell_in).to eq 14
