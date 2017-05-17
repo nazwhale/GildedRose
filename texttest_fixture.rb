@@ -1,19 +1,24 @@
 #!/usr/bin/ruby -w
 
 require File.join(File.dirname(__FILE__), 'lib/gilded_rose')
+require File.join(File.dirname(__FILE__), 'lib/tickets')
+require File.join(File.dirname(__FILE__), 'lib/normal')
+require File.join(File.dirname(__FILE__), 'lib/sulfuras')
+
+require File.join(File.dirname(__FILE__), 'lib/brie')
+
 
 puts "OMGHAI!"
 items = [
-  Item.new(name="+5 Dexterity Vest", sell_in=10, quality=20),
-  Item.new(name="Aged Brie", sell_in=2, quality=0),
-  Item.new(name="Elixir of the Mongoose", sell_in=5, quality=7),
-  Item.new(name="Sulfuras, Hand of Ragnaros", sell_in=0, quality=80),
-  Item.new(name="Sulfuras, Hand of Ragnaros", sell_in=-1, quality=80),
-  Item.new(name="Backstage passes to a TAFKAL80ETC concert", sell_in=15, quality=20),
-  Item.new(name="Backstage passes to a TAFKAL80ETC concert", sell_in=10, quality=49),
-  Item.new(name="Backstage passes to a TAFKAL80ETC concert", sell_in=5, quality=49),
+  Normal.new(name="+5 Dexterity Vest", sell_in=10, quality=20),
+  Brie.new(name="Aged Brie", sell_in=2, quality=0),
+  Normal.new(name="Elixir of the Mongoose", sell_in=5, quality=7),
+  Sulfuras.new(name="Sulfuras, Hand of Ragnaros", sell_in=0, quality=80),
+  Sulfuras.new(name="Sulfuras, Hand of Ragnaros", sell_in=-1, quality=80),
+  Tickets.new(name="Backstage passes to a TAFKAL80ETC concert", sell_in=10, quality=49),
+  Tickets.new(name="Backstage passes to a TAFKAL80ETC concert", sell_in=5, quality=49),
   # This Conjured item does not work properly yet
-  Item.new(name="Conjured Mana Cake", sell_in=3, quality=6), # <-- :O
+  Normal.new(name="Conjured Mana Cake", sell_in=3, quality=6), # <-- :O
 ]
 
 days = 2

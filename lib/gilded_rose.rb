@@ -1,6 +1,4 @@
-require_relative 'sulfuras'
 require_relative 'updates'
-
 class GildedRose
 
   def initialize(items)
@@ -9,57 +7,10 @@ class GildedRose
 
   def update_quality()
     @items.each do |item|
-
-      case item.name
-      when "Sulfuras, Hand of Ragnaros"
-        Sulfuras.new(item.sell_in, item.quality)
-      when "Aged Brie"
-        Brie.new(item.sell_in, item.quality)
-      when "Backstage passes to a TAFKAL80ETC concert"
-        Tickets.new(item.sell_in, item.quality)
-      else
-
-        #normal items
-        unless item.name == "Aged Brie" || item.name == "Backstage passes to a TAFKAL80ETC concert"
-          if item.quality > 0
-            item.quality -= 1
-          end
-        end
-
-        #Brie and passes
-          if item.quality < 50
-            item.quality += 1
-            if item.name == "Backstage passes to a TAFKAL80ETC concert"
-              if item.sell_in < 11
-                item.quality += 1 if item.quality < 50
-              end
-              if item.sell_in < 6
-                item.quality += 1 if item.quality < 50
-              end
-            end
-          end
-
-        #Update sell_in values
-        item.sell_in -= 1
-
-        #normal items
-        if item.sell_in < 0
-          if item.name != "Aged Brie"
-            if item.name != "Backstage passes to a TAFKAL80ETC concert"
-              if item.quality > 0
-                item.quality -= 1
-              end
-            else
-              item.quality = item.quality - item.quality
-            end
-          else
-            item.quality += 1 if item.quality < 50
-          end
-        end
-      end
-
+      item.update
     end
   end
+
 end
 
 class Item
