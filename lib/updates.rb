@@ -6,7 +6,11 @@ module Updates
     self.sell_in -= 1
   end
 
-  def mature
+  def degrade
+    self.quality -= 1
+  end
+
+  def improve
     self.quality += 1
   end
 

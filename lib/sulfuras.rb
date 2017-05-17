@@ -7,4 +7,7 @@ class Sulfuras
     @quality = quality
   end
 
+  def update
+  end
+
 end
