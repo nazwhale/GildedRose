@@ -1,5 +1,5 @@
 # Gilded Rose Refactoring Kata
-[![Build Status](https://travis-ci.org/nazwhale/GildedRose-Refactoring-Kata.svg?branch=master)](https://travis-ci.org/nazwhale/GildedRose-Refactoring-Kata)
+[![Build Status](https://travis-ci.org/nazwhale/GildedRose.svg?branch=master)](https://travis-ci.org/nazwhale/GildedRose)
 
 
 
@@ -53,7 +53,7 @@ As the code already worked, I decided to test each requirement using RSpec. Only
 
 First I thought about which objects I would need. After a couple of diagrams I came to the conclusion that each item with specific needs would warrant it's own class, with another class for 'normal' objects.
 
-It also became apparent that there was a lot of shared behaviour between these classes, so an `updates` module was created to store this. 
+It also became apparent that there was a lot of shared behaviour between these classes, so an `updates` module was created to store this.
 
 ### Acknowledgements
 
