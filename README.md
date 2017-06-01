@@ -1,7 +1,7 @@
-# Gilded Rose Refactoring Kata
+# Gilded Rose kata
 [![Build Status](https://travis-ci.org/nazwhale/GildedRose.svg?branch=master)](https://travis-ci.org/nazwhale/GildedRose)
-
-
+[![Code Climate](https://codeclimate.com/github/codeclimate/codeclimate/badges/gpa.svg)](https://codeclimate.com/github/nazwhale/GildedRose)
+[![Test Coverage](https://codeclimate.com/github/codeclimate/codeclimate/badges/coverage.svg)](https://codeclimate.com/github/nazwhale/GildedRose)
 
 ### Installation
 
@@ -24,11 +24,15 @@ $ ruby texttest_fixture.rb 5
 
 ### Task
 
-To complete the 'Gilded Rose' Kata, an exercise in turning one long, knotty `if` statement (which nevertheless satisfies its requirements) into clean and testable code.
+The 'Gilded Rose' kata is an exercise in turning one long, knotty `if` statement (which nevertheless satisfies its requirements) into clean and testable code.
 
-The code is created to manage an inventory of degrading goods at an imaginary shop.
+You are given one small feature to implement. However, the quality of the code means it is almost impossible to do. As a result, refactoring with an object-oriented approach is needed.
 
-The requirements are:
+### Requirements
+
+You are writing a programme for the owner of the 'Gilded Rose', a shop selling a variety of magical items.
+
+Their requirements are:
 
 - All items have a SellIn value which denotes the number of days we have to sell the item
 - All items have a Quality value which denotes how valuable the item is
@@ -45,7 +49,10 @@ Additionally, individual items have specific needs:
 	Quality increases by 2 when there are 10 days or less and by 3 when there are 5 days or less but
 	Quality drops to 0 after the concert
 
-See a comprehensive description of the Gilded Rose Kata [here](https://github.com/emilybache/GildedRose-Refactoring-Kata/blob/master/GildedRoseRequirements.txt).
+Finally, one rule:
+The `Item` class cannot be touched.
+
+The definitive version of the kata can be found [here](https://github.com/emilybache/GildedRose-Refactoring-Kata/blob/master/GildedRoseRequirements.txt).
 
 ### Approach
 
@@ -54,6 +61,9 @@ As the code already worked, I decided to test each requirement using RSpec. Only
 First I thought about which objects I would need. After a couple of diagrams I came to the conclusion that each item with specific needs would warrant it's own class, with another class for 'normal' objects.
 
 It also became apparent that there was a lot of shared behaviour between these classes, so an `updates` module was created to store this.
+
+### Future
+Remove dependency on argument order.
 
 ### Acknowledgements
 
