@@ -1,5 +1,6 @@
 # Gilded Rose kata
 [![Build Status](https://travis-ci.org/nazwhale/GildedRose.svg?branch=master)](https://travis-ci.org/nazwhale/GildedRose)
+[![BCH compliance](https://bettercodehub.com/edge/badge/nazwhale/GildedRose?branch=master)](https://bettercodehub.com/)
 
 ### Installation
 
