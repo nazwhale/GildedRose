@@ -1,7 +1,6 @@
 require_relative 'gilded_rose'
-class Sulfuras < Item
 
-  attr_reader :sell_in, :quality, :name
+class Sulfuras < Item
 
   def initialize(name, sell_in, quality)
     @name = name
@@ -11,5 +10,4 @@ class Sulfuras < Item
 
   def update
   end
-
 end

@@ -1,9 +1,6 @@
 require_relative 'gilded_rose'
-class Normal < Item
 
-  attr_reader :sell_in, :quality, :name
-  attr_writer :quality
-  include Updates
+class Normal < Item
 
   def initialize(name, sell_in, quality)
     @name, @sell_in, @quality = name, sell_in, quality

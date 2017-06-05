@@ -1,20 +1,21 @@
 require_relative 'updates'
+
 class GildedRose
 
   def initialize(items)
     @items = items
   end
 
-  def update_quality()
+  def update_quality
     @items.each do |item|
       item.update
     end
   end
-
 end
 
 class Item
   attr_accessor :name, :sell_in, :quality
+  include Updates
 
   def initialize(name, sell_in, quality)
     @name = name
