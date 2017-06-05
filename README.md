@@ -61,7 +61,9 @@ First I thought about which objects I would need. After a couple of diagrams I c
 It also became apparent that there was a lot of shared behaviour between these classes, so an `updates` module was created to store this.
 
 ### Future
-Remove dependency on argument order.
+I'd like to remove dependencies on argument order by using a hash.
+
+I'd also like to dream up some more features to implement to test the agility of my code.
 
 ### Acknowledgements
 
