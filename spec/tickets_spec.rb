@@ -2,7 +2,7 @@ require 'tickets'
 
 describe Tickets do
 
-  let(:tickets) { described_class.new(name="tickets", sell_in=15, quality=20)}
+  let(:tickets) { described_class.new(name: "tickets", sell_in: 15, quality: 20)}
 
   before do
     tickets.update

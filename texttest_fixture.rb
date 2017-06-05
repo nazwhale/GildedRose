@@ -10,15 +10,15 @@ require File.join(File.dirname(__FILE__), 'lib/brie')
 
 puts "OMGHAI!"
 items = [
-  Normal.new(name="+5 Dexterity Vest", sell_in=10, quality=20),
-  Brie.new(name="Aged Brie", sell_in=2, quality=0),
-  Normal.new(name="Elixir of the Mongoose", sell_in=5, quality=7),
-  Sulfuras.new(name="Sulfuras, Hand of Ragnaros", sell_in=0, quality=80),
-  Sulfuras.new(name="Sulfuras, Hand of Ragnaros", sell_in=-1, quality=80),
-  Tickets.new(name="Backstage passes to a TAFKAL80ETC concert", sell_in=10, quality=49),
-  Tickets.new(name="Backstage passes to a TAFKAL80ETC concert", sell_in=5, quality=49),
+  Normal.new(name: "+5 Dexterity Vest", sell_in: 10, quality: 20),
+  Brie.new(name: "Aged Brie", sell_in: 2, quality: 0),
+  Normal.new(name: "Elixir of the Mongoose", sell_in: 5, quality: 7),
+  Sulfuras.new(name: "Sulfuras, Hand of Ragnaros", sell_in: 0, quality: 80),
+  Sulfuras.new(name: "Sulfuras, Hand of Ragnaros", sell_in: -1, quality: 80),
+  Tickets.new(name: "Backstage passes to a TAFKAL80ETC concert", sell_in: 10, quality: 49),
+  Tickets.new(name: "Backstage passes to a TAFKAL80ETC concert", sell_in: 5, quality: 49),
   # This Conjured item does not work properly yet
-  Normal.new(name="Conjured Mana Cake", sell_in=3, quality=6), # <-- :O
+  Normal.new(name: "Conjured Mana Cake", sell_in: 3, quality: 6)
 ]
 
 days = 2

@@ -2,7 +2,7 @@ require 'brie'
 
 describe Brie do
 
-  let(:brie) { Brie.new(name="somerset brie", sell_in=10, quality=20)}
+  let(:brie) { Brie.new(name: "somerset brie", sell_in: 10, quality: 20)}
 
   before do
     brie.update

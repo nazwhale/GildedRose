@@ -2,7 +2,7 @@ require 'normal'
 
 describe Normal do
 
-  let(:normal) { described_class.new(name="normal", sell_in=10, quality=20)}
+  let(:normal) { described_class.new(name: "normal", sell_in: 10, quality: 20)}
 
   before do
     normal.update

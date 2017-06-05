@@ -2,8 +2,10 @@ require_relative 'gilded_rose'
 
 class Brie < Item
 
-  def initialize(name, sell_in, quality)
-    @name, @sell_in, @quality = name, sell_in, quality
+  def initialize(args)
+    @name = args[:name]
+    @sell_in = args[:sell_in]
+    @quality = args[:quality]
   end
 
   def update

@@ -17,10 +17,10 @@ class Item
   attr_accessor :name, :sell_in, :quality
   include Updates
 
-  def initialize(name, sell_in, quality)
-    @name = name
-    @sell_in = sell_in
-    @quality = quality
+  def initialize(args)
+    @name = args[:name]
+    @sell_in = args[:sell_in]
+    @quality = args[:quality]
   end
 
   def to_s()
