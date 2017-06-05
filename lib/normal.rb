@@ -3,9 +3,7 @@ require_relative 'gilded_rose'
 class Normal < Item
 
   def initialize(args)
-    @name = args[:name]
-    @sell_in = args[:sell_in]
-    @quality = args[:quality]
+    @name, @sell_in, @quality = args[:name], args[:sell_in], args[:quality]
   end
 
   def update
