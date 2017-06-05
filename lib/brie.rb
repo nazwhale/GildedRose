@@ -8,7 +8,12 @@ class Brie < Item
 
   def update
     self.passage_of_time
-    self.improve if quality < 50
+    increase_cheesiness
   end
 
+  private
+
+  def increase_cheesiness
+    self.improve if quality < 50
+  end
 end
