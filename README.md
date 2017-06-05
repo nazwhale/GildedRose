@@ -20,6 +20,7 @@ Run programme for 5 days:
 ```
 $ ruby texttest_fixture.rb 5
 ```
+![Example for 5 days](http://i.imgur.com/dkGDYlR.png)
 
 ### Task
 
