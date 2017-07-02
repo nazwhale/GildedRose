@@ -15,11 +15,9 @@ class Tickets < Item
   private
 
   def increase_ticket_value
-    if quality < 50
-      self.improve
-      self.improve if sell_in <= 10
-      self.improve if sell_in <= 5
-    end
+    self.improve
+    self.improve if sell_in <= 10
+    self.improve if sell_in <= 5
   end
 
   def limit_ticket_quality
