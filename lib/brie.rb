@@ -1,4 +1,4 @@
-require_relative 'gilded_rose'
+require_relative 'item_updater'
 
 class Brie < Item
 
@@ -16,4 +16,5 @@ class Brie < Item
   def increase_cheesiness
     self.improve if quality < 50
   end
+
 end

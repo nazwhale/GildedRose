@@ -1,4 +1,4 @@
-require_relative 'gilded_rose'
+require_relative 'item_updater'
 
 class Tickets < Item
 
@@ -26,4 +26,5 @@ class Tickets < Item
     self.quality = 50 if quality > 50
     self.quality = 0 if sell_in <= 0
   end
+
 end

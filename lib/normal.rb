@@ -1,4 +1,4 @@
-require_relative 'gilded_rose'
+require_relative 'item_updater'
 
 class Normal < Item
 
@@ -19,4 +19,5 @@ class Normal < Item
       self.degrade if sell_in < 0
     end
   end
+
 end
