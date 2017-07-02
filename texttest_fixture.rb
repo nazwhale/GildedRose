@@ -1,12 +1,10 @@
 #!/usr/bin/ruby -w
 
-require File.join(File.dirname(__FILE__), 'lib/gilded_rose')
+require File.join(File.dirname(__FILE__), 'lib/item_updater')
 require File.join(File.dirname(__FILE__), 'lib/tickets')
 require File.join(File.dirname(__FILE__), 'lib/normal')
 require File.join(File.dirname(__FILE__), 'lib/sulfuras')
-
 require File.join(File.dirname(__FILE__), 'lib/brie')
-
 
 puts "OMGHAI!"
 items = [
@@ -26,7 +24,7 @@ if ARGV.size > 0
   days = ARGV[0].to_i + 1
 end
 
-gilded_rose = GildedRose.new items
+gilded_rose = ItemUpdater.new items
 (0...days).each do |day|
   puts "-------- day #{day} --------"
   puts "name, sellIn, quality"
